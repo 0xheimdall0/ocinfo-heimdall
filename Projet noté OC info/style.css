@@ -1,0 +1,509 @@
+/*general*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: white;
+    background-image: linear-gradient(to bottom, black, rgb(9, 96, 9));
+    background-attachment: fixed;
+    font-family: 'Terminal', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+input {
+    margin: 15px 0px;
+}
+label {
+    margin: 15px;
+}
+header {
+    background-color: black;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding-top: 5px;
+    border-top: 3px solid lime;
+}
+
+
+
+/*header*/
+#whois {
+    text-align: center;
+    color: lime;
+    text-shadow: 3px 3px 8px white;
+    font-size: 300%;
+    padding: 30px 0px 30px 0px;
+    height: 50;
+}
+
+
+
+/*nav menu*/
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: black;
+    border-style: solid;
+    border-color: white;
+    border-width: -2px;
+}
+.headerLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#homeBtn, #aboutBtn, #servicesBtn, #portfolioBtn, #blogBtn, #contactBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 25px;
+    background-image: linear-gradient(to top, black, lime);
+    width: 100px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    box-shadow: 0 0 10px 1px white;
+}
+#homeBtn:hover, #aboutBtn:hover, #servicesBtn:hover, #portfolioBtn:hover, #blogBtn:hover, #contactBtn:hover {
+    box-shadow: 0 0 10px 1px lime;
+    border-color: lime;
+    scale: 1.2;
+    transition: linear;
+    transition-duration: 0.2s;
+}
+
+
+
+/*about*/
+#about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#aboutMeTitle {
+    text-align: center;
+    color: lime;
+    text-shadow: 3px 3px 8px white;
+    font-size: 300%;
+    margin: 30px 0 0 0;
+}
+.aboutAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#imageAI {
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0 0 10px 3px white;
+    filter: blur(20px);
+    transition: filter 0.5s ease-out;
+    height: 100%;
+    margin: 60px 200px 20px 200px;
+}
+#imageAI:hover {
+    filter: blur(0px);
+}
+#imageAI:hover .imageAItext {
+    opacity: 0;
+}
+#presentation {
+    margin: 40px 0px 10px 0px;
+    width: 420px;
+    height: auto;
+    text-align: center;
+    font-size: 120%;
+}
+#aboutButtons {
+    display:flex;
+}
+#resumeBtn, #contactBtn2 {
+    width: 150px;
+    font-size: 100%;
+}
+/*progress bars*/
+#skillLevels {
+    font-size: 200%;
+    margin: 40px 0px 0px 0px;
+    color: lime;
+    text-shadow: 3px 3px 8px white;
+}
+.skills {
+    display:flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 10px;
+}
+.skill {
+    margin: 15px;
+    display: flex;
+    justify-content: end;
+}
+.skill-name {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: block;
+}
+.progress-bar {
+    width: 200px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    overflow: hidden;
+    box-shadow: 0 0 10px 2px white;
+    margin-left: 50px;
+}
+.progress {
+    height: 100%;
+    background-image: linear-gradient(to right, orange, lime);
+    animation: fill 4s ease-out forwards;
+}
+
+
+
+/*services*/
+#services {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0 35px 0;
+    border-top: 3px solid lime;
+}
+.servicesTitle {
+    text-align: start;
+    color: lime;
+    text-shadow: 3px 3px 8px white;
+    font-size: 300%;
+    margin: 20px 0 40px 20px;
+    text-align: center;
+}
+.servicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/*cards*/
+.pythonService, .bfService, .jsService, .htmlService, .penService, .osintService {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width:250px;
+    border-style:groove;
+    border-width: 2px;
+    border-color: white;
+    margin: 15px 40px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, black, lime);
+    box-shadow: 0 0 10px 1px white;
+    transition: scale 0.5s ease;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    cursor: pointer;
+}
+.pythonService:hover, .bfService:hover, .jsService:hover, .htmlService:hover, .penService:hover, .osintService:hover {
+    scale: 1.05;
+}
+.pythonIco, .bfIco, .jsIco, .htmlIco, .penIco, .osintIco {
+    margin: 20px;
+}
+.pythonTitle, .bfTitle, .jsTitle, .htmlTitle, .penTitle, .osintTitle {
+    margin: 5px 10px;
+    font-size: 125%
+}
+.pythonDesc, .bfDesc, .jsDesc, .htmlDesc, .penDesc, .osintDesc {
+    text-align: center;
+    margin: 20px 20px 0 20px;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+.card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+
+
+
+/*portfolio*/
+#portfolio {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px 0 10px 0;
+    border-top: 3px solid lime;
+}
+.projectTitle {
+    text-align: center;
+    color: lime;
+    text-shadow: 3px 3px 8px white;
+    font-size: 300%;
+    margin: 40px 0 20px 0;
+}
+.projectContainer {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+}
+.projectFirewall, .projectCyber, .projectOsint, .projectSimulation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: white;
+    border-width: 3px;
+    margin: 30px;
+    text-align: center;
+    border-color: lime;
+    background-image: linear-gradient(to top, black, lime);
+    box-shadow: 0 0 10px 1px white;
+}
+.firewallIco, .cyberIco, .osintIco2, .simulationIco {
+    margin: 10px;
+}
+.firewallText, .cyberText, .osintText, .simulationText {
+    width: 100px;
+    text-align: center;
+}
+
+
+
+/*blog*/
+#blog {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 5px 0 50px 0;
+    border-top: 3px solid lime;
+    border-bottom: 3px solid lime;
+}
+.blogTitle {
+    text-align: center;
+    color: lime;
+    text-shadow: 3px 3px 8px white;
+    font-size: 300%;
+    margin: 40px 0 20px 0;
+}
+.articles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.blog1, .blog2, .blog3 {
+    height: 400px;
+    width: 300px;
+    border-style: solid;
+    border-color: lime;
+    border-width: 2px;
+    box-shadow: 0 0 10px 1px white;
+    background-color: rgba(0, 0, 0, 0.322);
+    margin: 40px 50px;
+}
+.infos1, .infos2, .infos3 {
+    height: 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 20px 0 20px;
+}
+.title1, .title2, .title3 {
+    font-weight: bold;
+    font-size: 125%;
+}
+.readmore {
+    width: 78px;
+    border-bottom: 2px solid white;
+    position: relative;
+    opacity: 0.7;
+}
+
+
+
+/*contact*/
+#contact {
+    width: 100%;
+    height: auto;
+    padding: 10px 0pc 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/matrix.jpg);
+}
+.contactme {
+    font-size: 300%;
+    margin: 30px;
+    color: lime;
+    text-shadow: 2px 2px 3px white;
+}
+/*form*/
+#containerForm {
+    box-shadow: 0 0 10px 5px white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    width: auto;
+    height: auto;
+    backdrop-filter: blur(10px);
+}
+/*inputs*/
+input[id="name"], input[id="email"] {
+    padding: 12px 6px;
+    width: 300px;
+    box-sizing: border-box;
+    border-color: white;
+    border-style: solid;
+    margin: 20px;
+}
+input[id="name"]:focus, input[id="email"]:focus, textarea[id="message"]:focus {
+    box-shadow: 3px 3px 8px white;
+    transition: ease-out;
+    transition-duration: 0.2s;
+}
+button {
+    width: 75px;
+    height: 35px;
+    background-image: linear-gradient(to top, black, lime);
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 1px white;
+    margin: 20px;
+    color: white;
+    font-family: "Terminal", sans-serif;
+}
+button:hover {
+    box-shadow: 0 0 10px 1px lime;
+    border-color: lime;
+    scale: 1.2;
+    transition: linear;
+    transition-duration: 0.2s;
+}
+textarea[id="message"] {
+    padding: 6px;
+    height: 100px;
+    width: 300px;
+    box-sizing: border-box;
+    border-color: black;
+    border-style: solid;
+    margin: 20px 20px 10px 5px;
+}
+#formMessage {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/*footer*/
+.socialsTitle {
+    font-size: 200%;
+    margin: 30px 0px 20px 0px;
+    color: lime;
+    text-shadow: 2px 2px 3px white;
+}
+#socials {
+    margin: 0px 0px 20px 0px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#socialsX, #socialsInstagram, #socialsTelegram {
+    margin: 20px;
+    height: 50px;
+    width: 50px;
+    border-style: solid;
+    border-color: lime;
+    border-width: 2px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px lime;
+}
+#socialsX:hover, #socialsInstagram:hover, #socialsTelegram:hover {
+    scale: 1.1;
+    cursor: pointer;
+    transition: linear;
+    transition-duration: 0.2s;
+}
+#insta {
+    border-radius: 50%;
+}
+
+
+
+/*animations and effects*/
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+.blink {
+    animation: blink 1s infinite;
+}
+@keyframes fill {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
